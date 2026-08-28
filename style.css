@@ -15,6 +15,7 @@ body {
   margin: 0 auto;
   padding: 30px 40px;
 }
+
 main {
   display: grid;
   grid-template-columns: minmax(220px, 1fr) minmax(420px, 1.6fr);
@@ -34,7 +35,7 @@ main {
   gap: 12px;
 }
 
-h2{
+h2 {
   margin: 0;
   font-size: clamp(4rem, 10vw, 7rem);
   line-height: 0.9;
@@ -51,10 +52,12 @@ h2{
   letter-spacing: 0.15em;
   line-height: 1.4;
 }
+
 #interests {
   margin-top: 30px;
-  width: 200%; 
- }
+  width: 200%;
+}
+
 #interests h3 {
   margin: 0 0 12px;
   font-size: 0.75rem;
@@ -62,7 +65,8 @@ h2{
   text-transform: uppercase;
   letter-spacing: 0.2em;
   color: #a52f56;
-  }
+}
+
 #interests ul {
   list-style: none;
   margin: 0;
@@ -71,6 +75,7 @@ h2{
   flex-wrap: wrap;
   gap: 8px;
 }
+
 #interests li {
   color: #a52f56;
   font-size: 1rem;
@@ -105,7 +110,7 @@ h2{
 }
 
 .sidebar-img:hover {
-   transform: translateY(-4px);
+  transform: translateY(-4px);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
 }
 nav {
@@ -147,4 +152,60 @@ nav h1 {
 .nav-li a:hover {
   background: #a52f56;
   color: #fff;
+}
+/* Portfolio styles */
+.content h1 {
+  color: #a52f56;
+  text-transform: uppercase;
+}
+.content h3 {
+  color:#a52f56;
+}
+
+#portfolio {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px; 
+}
+
+#portfolio li {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+#portfolio a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: #a52f56;
+  padding: 16px 20px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+#portfolio a:hover {
+  background: #a52f56;
+  color: #fff;
+  transform: translateX(4px);
+}
+
+#portfolio a::after {
+  content: ">>>";
+  font-size: 0.85rem;
+  opacity: 0.4;
+  transition: opacity 0.25s ease;
+  white-space: nowrap;
+}
+
+#portfolio a:hover::after {
+  opacity: 1;
 }
